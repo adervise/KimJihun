@@ -1,0 +1,456 @@
+ 
+-- 변경작업  데이터 추출 쿼리
+  SELECT b.admi_cd
+	, b.mega_nm
+	, b.cty_nm
+	, b.thrd_nm
+	, b.admi_nm
+	, b.scss_date
+	, a.*
+    FROM tbsta_admi_lifeinfo a, vwadm_admi b
+   WHERE a.yyyy = '201201'
+     AND a.admi_cd = b.admi_cd
+   UNION ALL
+  SELECT b.admi_cd
+	, b.mega_nm
+	, b.cty_nm
+	, b.thrd_nm
+	, b.admi_nm
+	, b.scss_date
+	, a.*
+    FROM (SELECT * FROM tbsta_admi_lifeinfo WHERE yyyy='201201') a, vwadm_admi b
+   WHERE 1=1
+     AND a.admi_cd(+) = b.admi_cd
+     AND a.admi_cd IS NULL
+     AND b.scss_date IS NULL
+   ORDER BY 1 ;
+ 
+spool 전 tbwadmilifeinfo yyyymm 체크 후 변경 후 spool
+ 
+ 정기데이터 작업 작업스크립트..
+서버의 D:\data\작업내역.SQL    파일의 내용..
+ 
+--// 01. 기존 백업데이터 삭제
+DROP TABLE backup_tbwadmictydong;
+DROP TABLE backup_tbwadmilgctydong;
+DROP TABLE backup_tbwadmilgctydong_full;
+DROP TABLE backup_tbwadmilifeinfo;
+DROP TABLE backup_tbwadmimbr;
+DROP TABLE backup_tbwadmistat;
+DROP TABLE backup_tbwapart;
+DROP TABLE backup_tbwapartalias;
+DROP TABLE backup_tbwapartdanji;
+DROP TABLE backup_tbwapartdong;
+DROP TABLE backup_tbwapartinfo;
+DROP TABLE backup_tbwapartlfno;
+DROP TABLE backup_tbwapartnm;
+DROP TABLE backup_tbwbusterminal;
+DROP TABLE backup_tbwctytaxinfo;
+DROP TABLE backup_tbwhous;
+DROP TABLE backup_tbwhousdong;
+DROP TABLE backup_tbwhousid;
+DROP TABLE backup_tbwlandprice;
+DROP TABLE backup_tbwlgadmictydong;
+DROP TABLE backup_tbwlgctydong;
+DROP TABLE backup_tbwlgsndalias;
+DROP TABLE backup_tbwlgsndhous;
+DROP TABLE backup_tbwpophous;
+DROP TABLE backup_tbwschool;
+DROP TABLE backup_tbwstore;
+DROP TABLE backup_tbwsubway;
+DROP TABLE backup_tbwthirdadmicty;
+DROP TABLE backup_tbwtrain;
+DROP TABLE backup_tbwzipcode;
+ 
+/**-- 참고) 생략되어 있는 테이블
+backup_tbwmegacty
+backup_tbwgcrmctyrgn
+위의 두 테이블의 경우 광역시도/시군구에 대한 내용이므로
+변경된 내역이 없으면 데이터 갱신소요 없음
+**/
+ 
+--// 02 현재 백업데이터 생성
+SELECT * INTO backup_tbwadmictydong         FROM tbwadmictydong
+SELECT * INTO backup_tbwadmilgctydong       FROM tbwadmilgctydong
+SELECT * INTO backup_tbwadmilgctydong_full  FROM tbwadmilgctydong_full
+SELECT * INTO backup_tbwadmilifeinfo        FROM tbwadmilifeinfo
+SELECT * INTO backup_tbwadmimbr             FROM tbwadmimbr
+SELECT * INTO backup_tbwadmistat            FROM tbwadmistat
+SELECT * INTO backup_tbwapart               FROM tbwapart
+SELECT * INTO backup_tbwapartalias          FROM tbwapartalias
+SELECT * INTO backup_tbwapartdanji          FROM tbwapartdanji
+SELECT * INTO backup_tbwapartdong           FROM tbwapartdong
+SELECT * INTO backup_tbwapartinfo           FROM tbwapartinfo
+SELECT * INTO backup_tbwapartlfno           FROM tbwapartlfno
+SELECT * INTO backup_tbwapartnm             FROM tbwapartnm
+SELECT * INTO backup_tbwbusterminal         FROM tbwbusterminal
+SELECT * INTO backup_tbwctytaxinfo          FROM tbwctytaxinfo
+SELECT * INTO backup_tbwhous                FROM tbwhous
+SELECT * INTO backup_tbwhousdong            FROM tbwhousdong
+SELECT * INTO backup_tbwhousid              FROM tbwhousid
+SELECT * INTO backup_tbwlandprice           FROM tbwlandprice
+SELECT * INTO backup_tbwlgadmictydong       FROM tbwlgadmictydong
+SELECT * INTO backup_tbwlgctydong           FROM tbwlgctydong
+SELECT * INTO backup_tbwlgsndalias          FROM tbwlgsndalias
+SELECT * INTO backup_tbwlgsndhous           FROM tbwlgsndhous
+SELECT * INTO backup_tbwpophous             FROM tbwpophous
+SELECT * INTO backup_tbwschool              FROM tbwschool
+SELECT * INTO backup_tbwstore               FROM tbwstore
+SELECT * INTO backup_tbwsubway              FROM tbwsubway
+SELECT * INTO backup_tbwthirdadmicty        FROM tbwthirdadmicty
+SELECT * INTO backup_tbwtrain               FROM tbwtrain
+SELECT * INTO backup_tbwzipcode             FROM tbwzipcode
+ 
+--// 05. 로딩용 임시테이블 생성 (테이블 속성만 복사)
+SELECT * INTO tmp_tbwadmictydong        FROM tbwadmictydong        WHERE 1=2;
+SELECT * INTO tmp_tbwadmilgctydong      FROM tbwadmilgctydong      WHERE 1=2;
+SELECT * INTO tmp_tbwadmilgctydong_full FROM tbwadmilgctydong_full WHERE 1=2;
+SELECT * INTO tmp_tbwadmilifeinfo       FROM tbwadmilifeinfo       WHERE 1=2;
+SELECT * INTO tmp_tbwadmimbr            FROM tbwadmimbr            WHERE 1=2;
+SELECT * INTO tmp_tbwadmistat           FROM tbwadmistat           WHERE 1=2;
+SELECT * INTO tmp_tbwapart              FROM tbwapart              WHERE 1=2;
+SELECT * INTO tmp_tbwapartalias         FROM tbwapartalias         WHERE 1=2;
+SELECT * INTO tmp_tbwapartdanji         FROM tbwapartdanji         WHERE 1=2;
+SELECT * INTO tmp_tbwapartdong          FROM tbwapartdong          WHERE 1=2;
+SELECT * INTO tmp_tbwapartinfo          FROM tbwapartinfo          WHERE 1=2;
+SELECT * INTO tmp_tbwapartlfno          FROM tbwapartlfno          WHERE 1=2;
+SELECT * INTO tmp_tbwapartnm            FROM tbwapartnm            WHERE 1=2;
+SELECT * INTO tmp_tbwbusterminal        FROM tbwbusterminal        WHERE 1=2;
+SELECT * INTO tmp_tbwctytaxinfo         FROM tbwctytaxinfo         WHERE 1=2;
+SELECT * INTO tmp_tbwhous               FROM tbwhous               WHERE 1=2;
+SELECT * INTO tmp_tbwhousdong           FROM tbwhousdong           WHERE 1=2;
+SELECT * INTO tmp_tbwhousid             FROM tbwhousid             WHERE 1=2;
+SELECT * INTO tmp_tbwlandprice          FROM tbwlandprice          WHERE 1=2;
+SELECT * INTO tmp_tbwlgadmictydong      FROM tbwlgadmictydong      WHERE 1=2;
+SELECT * INTO tmp_tbwlgctydong          FROM tbwlgctydong          WHERE 1=2;
+SELECT * INTO tmp_tbwlgsndalias         FROM tbwlgsndalias         WHERE 1=2;
+SELECT * INTO tmp_tbwlgsndhous          FROM tbwlgsndhous          WHERE 1=2;
+SELECT * INTO tmp_tbwpophous            FROM tbwpophous            WHERE 1=2;
+SELECT * INTO tmp_tbwschool             FROM tbwschool             WHERE 1=2;
+SELECT * INTO tmp_tbwstore              FROM tbwstore              WHERE 1=2;
+SELECT * INTO tmp_tbwsubway             FROM tbwsubway             WHERE 1=2;
+SELECT * INTO tmp_tbwthirdadmicty       FROM tbwthirdadmicty       WHERE 1=2;
+SELECT * INTO tmp_tbwtrain              FROM tbwtrain              WHERE 1=2;
+SELECT * INTO tmp_tbwzipcode            FROM tbwzipcode            WHERE 1=2;
+ 
+
+-- 괄호안에 추가로 씌여져 있는 이름을 삭제
+SELECT substring(terminal_nm,1,charindex('(', terminal_nm)-1), terminal_nm
+  FROM tmp_tbwbusterminal
+ WHERE charindex('(', terminal_nm) > 0
+ 
+UPDATE tmp_tbwbusterminal
+   SET terminal_nm = substring(terminal_nm,1,charindex('(', terminal_nm)-1)
+ WHERE charindex('(', terminal_nm) > 0
+ 
+INSERT INTO tmp_tbwapartlfno
+VALUES ('1130510100007911692','세명그린빌','2','102',1,11,'76000000','76000000',20130,20130) ;
+ 
+--// 05. 로딩 데이터 건수 확인
+ 
+SELECT 'tbwadmictydong       ' AS tbl_name, COUNT(1) FROM tmp_tbwadmictydong        WITH (nolock) UNION ALL
+SELECT 'tbwadmilgctydong     ' AS tbl_name, COUNT(1) FROM tmp_tbwadmilgctydong      WITH (nolock) UNION ALL
+SELECT 'tbwadmilgctydong_full' AS tbl_name, COUNT(1) FROM tmp_tbwadmilgctydong_full WITH (nolock) UNION ALL
+SELECT 'tbwadmilifeinfo      ' AS tbl_name, COUNT(1) FROM tmp_tbwadmilifeinfo       WITH (nolock) UNION ALL
+SELECT 'tbwadmimbr           ' AS tbl_name, COUNT(1  FROM tmp_tbwadmimbr            WITH (nolock) UNION ALL
+SELECT 'tbwadmistat          ' AS tbl_name, COUNT(1) FROM tmp_tbwadmistat           WITH (nolock) UNION ALL
+SELECT 'tbwapart             ' AS tbl_name, COUNT(1) FROM tmp_tbwapart 		    WITH (nolock) UNION ALL
+SELECT 'tbwapartalias        ' AS tbl_name, COUNT(1) FROM tmp_tbwapartalias         WITH (nolock) UNION ALL
+SELECT 'tbwapartdanji        ' AS tbl_name, COUNT(1) FROM tmp_tbwapartdanji         WITH (nolock) UNION ALL
+SELECT 'tbwapartdong         ' AS tbl_name, COUNT(1) FROM tmp_tbwapartdong          WITH (nolock) UNION ALL
+SELECT 'tbwapartinfo         ' AS tbl_name, COUNT(1) FROM tmp_tbwapartinfo          WITH (nolock) UNION ALL
+SELECT 'tbwapartlfno         ' AS tbl_name, COUNT(1) FROM tmp_tbwapartlfno          WITH (nolock) UNION ALL
+SELECT 'tbwapartnm           ' AS tbl_name, COUNT(1) FROM tmp_tbwapartnm            WITH (nolock) UNION ALL
+SELECT 'tbwbusterminal       ' AS tbl_name, COUNT(1) FROM tmp_tbwbusterminal        WITH (nolock) UNION ALL
+SELECT 'tbwctytaxinfo        ' AS tbl_name, COUNT(1) FROM tmp_tbwctytaxinfo         WITH (nolock) UNION ALL
+SELECT 'tbwhous              ' AS tbl_name, COUNT(1) FROM tmp_tbwhous		    WITH (nolock) UNION ALL
+SELECT 'tbwhousdong          ' AS tbl_name, COUNT(1) FROM tmp_tbwhousdong           WITH (nolock) UNION ALL
+SELECT 'tbwhousid            ' AS tbl_name, COUNT(1) FROM tmp_tbwhousid             WITH (nolock) UNION ALL
+SELECT 'tbwlandprice         ' AS tbl_name, COUNT(1) FROM tmp_tbwlandprice          WITH (nolock) UNION ALL
+SELECT 'tbwlgadmictydong     ' AS tbl_name, COUNT(1) FROM tmp_tbwlgadmictydong      WITH (nolock) UNION ALL
+SELECT 'tbwlgctydong         ' AS tbl_name, COUNT(1) FROM tmp_tbwlgctydong          WITH (nolock) UNION ALL
+SELECT 'tbwlgsndalias        ' AS tbl_name, COUNT(1) FROM tmp_tbwlgsndalias         WITH (nolock) UNION ALL
+SELECT 'tbwlgsndhous         ' AS tbl_name, COUNT(1) FROM tmp_tbwlgsndhous          WITH (nolock) UNION ALL
+SELECT 'tbwpophous           ' AS tbl_name, COUNT(1) FROM tmp_tbwpophous            WITH (nolock) UNION ALL
+SELECT 'tbwschool            ' AS tbl_name, COUNT(1) FROM tmp_tbwschool             WITH (nolock) UNION ALL
+SELECT 'tbwstore             ' AS tbl_name, COUNT(1) FROM tmp_tbwstore              WITH (nolock) UNION ALL
+SELECT 'tbwsubway            ' AS tbl_name, COUNT(1) FROM tmp_tbwsubway             WITH (nolock) UNION ALL
+SELECT 'tbwthirdadmicty      ' AS tbl_name, COUNT(1) FROM tmp_tbwthirdadmicty       WITH (nolock) UNION ALL
+SELECT 'tbwtrain             ' AS tbl_name, COUNT(1) FROM tmp_tbwtrain              WITH (nolock) UNION ALL
+SELECT 'tbwzipcode           ' AS tbl_name, COUNT(1) FROM tmp_tbwzipcode            WITH (nolock) ORDER BY 1;
+ 
+--// 06. tbwapartdanji 데이터 만들어주기
+INSERT INTO tmp_tbwapartdanji
+SELECT hous_id
+	, apart_nm
+	, admi_cty_no
+	, address
+	, SUM(house)
+	, ROUND(CASE WHEN SUM(pyung_sum) = 0 THEN 0 ELSE SUM(price_sum) / SUM(pyung_sum) END, 0)
+	, ROUND(AVG(x), 0)
+	, ROUND(AVG(y), 0)
+FROM tmp_tbwapartinfo
+GROUP BY hous_id
+	, apart_nm
+	, admi_cty_no
+	, address ;
+ 
+/** 07. 지번테이블을 비롯한 큰 테이블에 인덱스 생성 **/
+    --// TBWHOUSID
+    ALTER TABLE TMP_TBWHOUSID ADD  CONSTRAINT PK_TMP_TBWHOUSID PRIMARY KEY CLUSTERED
+    (
+    	HOUS_ID ASC
+    )
+ 
+    CREATE INDEX IDX_TMP_TBWHOUSID_01 ON TMP_TBWHOUSID
+    (
+    	LG_CTY_NO ASC,
+    	MAIN_HOUS_NO ASC,
+    	ATCH_HOUS_NO ASC
+    )
+ 
+    CREATE INDEX IDX_TMP_TBWHOUSID_02 ON TMP_TBWHOUSID
+    (
+    	ADMI_CTY_NO ASC,
+    	MAIN_HOUS_NO ASC,
+    	ATCH_HOUS_NO ASC
+    )
+ 
+    CREATE INDEX IDX_TMP_TBWHOUSID_03 ON TMP_TBWHOUSID
+    (
+    	X_AXIS_LAND ASC,
+    	Y_AXIS_LAND ASC
+    )
+ 
+    --// TBWAPARTLFNO
+    CREATE INDEX IDX_TMP_TBWAPARTLFNO_01 ON TMP_TBWAPARTLFNO
+    (
+    	HOUS_ID,
+    	APART_NM,
+    	APART_DONG,
+    	APART_HO
+    )
+ 
+    --// TBWPOPHOUS
+    CREATE CLUSTERED INDEX IDXCLU_TMP_TBWPOPHOUS ON TMP_TBWPOPHOUS
+    (
+    	X,
+    	Y,
+    	ADMI_CTY_NO
+    )
+ 
+    CREATE INDEX IDX_TMP_TBWPOPHOUS_02 ON TMP_TBWPOPHOUS
+    (
+    	X ASC,
+    	Y ASC,
+    	ADMI_CTY_NO ASC
+    )
+ 
+    CREATE INDEX IDX01_TMP_TBWPOPHOUS ON TMP_TBWPOPHOUS
+    (
+    	ADMI_CTY_NO ASC
+    )
+ 
+    CREATE INDEX IDX02_TMP_TBWPOPHOUS ON TMP_TBWPOPHOUS
+    (
+    	HOUS_ID ASC
+    )
+ 
+    CREATE INDEX IDX03_TMP_TBWPOPHOUS ON TMP_TBWPOPHOUS
+    (
+    	X ASC,
+    	Y ASC
+    )
+ 
+    --// TBWSTORE
+    CREATE INDEX TMP_TBWSTORE_IDX01 ON TMP_TBWSTORE
+    (
+    	X ASC,
+    	Y ASC
+    )
+ 
+    CREATE INDEX TMP_TBWSTORE_IDX02 ON TMP_TBWSTORE
+    (
+    	ADMI_CTY_NO ASC
+    )
+ 
+    CREATE INDEX TMP_TBWSTORE_IDX03 ON TMP_TBWSTORE
+    (
+    	UPJONG3_CD ASC
+    )
+ 
+    CREATE INDEX TMP_TBWSTORE_IDX04 ON TMP_TBWSTORE
+    (
+    	HOUS_ID ASC
+    )
+ 
+--// 08. GS에서 입력한 별칭데이터 넣어주기
+ 
+    INSERT INTO tmp_tbwapartalias
+    SELECT a.*
+      FROM backup_tbwapartalias a, tmp_tbwapartnm b
+     WHERE a.hous_id = b.hous_id
+       AND a.apart_nm = b.apart_nm
+       AND NOT EXISTS (SELECT 1
+    			 FROM tmp_tbwapartalias c
+    			WHERE a.hous_id = c.hous_id
+    			  AND a.apart_nm = c.apart_nm
+    			  AND a.apart_alias = c.apart_alias);
+ 
+    INSERT INTO tmp_tbwlgsndalias
+    SELECT a.*
+    FROM backup_tbwlgsndalias a, tmp_tbwlgsndhous b
+    WHERE a.hous_id = b.hous_id
+      AND a.hous_nm = b.hous_nm
+      AND NOT EXISTS (SELECT 1
+    			FROM tmp_tbwlgsndalias c
+    		       WHERE a.hous_id = c.hous_id
+    			 AND a.hous_nm = c.hous_nm
+    		         AND a.hous_alias = c.hous_alias);
+ 
+--// 09. 최종작업... 운영테이블 비운 후에에 데이터 밀어넣기 및 테이블 drop & rename
+    TRUNCATE TABLE  tbwadmictydong        ;
+    TRUNCATE TABLE  tbwadmilgctydong      ;
+    TRUNCATE TABLE  tbwadmilgctydong_full ;
+    TRUNCATE TABLE  tbwadmilifeinfo       ;
+    TRUNCATE TABLE  tbwadmimbr            ;
+    TRUNCATE TABLE  tbwadmistat           ;
+    TRUNCATE TABLE  tbwapart              ;
+    TRUNCATE TABLE  tbwapartalias         ;
+    TRUNCATE TABLE  tbwapartdanji         ;
+    TRUNCATE TABLE  tbwapartdong          ;
+    TRUNCATE TABLE  tbwapartinfo          ;
+    TRUNCATE TABLE  tbwapartnm            ;
+    TRUNCATE TABLE  tbwbusterminal        ;
+    TRUNCATE TABLE  tbwctytaxinfo         ;
+    TRUNCATE TABLE  tbwhous               ;
+    TRUNCATE TABLE  tbwhousdong           ;
+    TRUNCATE TABLE  tbwlandprice          ;
+    TRUNCATE TABLE  tbwlgadmictydong      ;
+    TRUNCATE TABLE  tbwlgctydong          ;
+    TRUNCATE TABLE  tbwlgsndalias         ;
+    TRUNCATE TABLE  tbwlgsndhous          ;
+    TRUNCATE TABLE  tbwschool             ;
+    TRUNCATE TABLE  tbwsubway             ;
+    TRUNCATE TABLE  tbwthirdadmicty       ;
+    TRUNCATE TABLE  tbwtrain              ;
+    TRUNCATE TABLE  tbwzipcode            ;
+ 
+    INSERT INTO tbwadmictydong        SELECT * FROM tmp_tbwadmictydong        ;
+    INSERT INTO tbwadmilgctydong      SELECT * FROM tmp_tbwadmilgctydong      ;
+    INSERT INTO tbwadmilgctydong_full SELECT * FROM tmp_tbwadmilgctydong_full ;
+    INSERT INTO tbwadmilifeinfo       SELECT * FROM tmp_tbwadmilifeinfo       ;
+    INSERT INTO tbwadmimbr            SELECT * FROM tmp_tbwadmimbr            ;
+    INSERT INTO tbwadmistat           SELECT * FROM tmp_tbwadmistat           ;
+    INSERT INTO tbwapart              SELECT * FROM tmp_tbwapart              ;
+    INSERT INTO tbwapartalias         SELECT * FROM tmp_tbwapartalias         ;
+    INSERT INTO tbwapartdanji         SELECT * FROM tmp_tbwapartdanji         ;
+    INSERT INTO tbwapartdong          SELECT * FROM tmp_tbwapartdong          ;
+    INSERT INTO tbwapartinfo          SELECT * FROM tmp_tbwapartinfo          ;
+    INSERT INTO tbwapartnm            SELECT * FROM tmp_tbwapartnm            ;
+    INSERT INTO tbwbusterminal        SELECT * FROM tmp_tbwbusterminal        ;
+    INSERT INTO tbwctytaxinfo         SELECT * FROM tmp_tbwctytaxinfo         ;
+    INSERT INTO tbwhous               SELECT * FROM tmp_tbwhous               ;
+    INSERT INTO tbwhousdong           SELECT * FROM tmp_tbwhousdong           ;           
+    INSERT INTO tbwlandprice          SELECT * FROM tmp_tbwlandprice          ;
+    INSERT INTO tbwlgadmictydong      SELECT * FROM tmp_tbwlgadmictydong      ;
+    INSERT INTO tbwlgctydong          SELECT * FROM tmp_tbwlgctydong          ;
+    INSERT INTO tbwlgsndalias         SELECT * FROM tmp_tbwlgsndalias         ;
+    INSERT INTO tbwlgsndhous          SELECT * FROM tmp_tbwlgsndhous          ;
+    INSERT INTO tbwschool             SELECT * FROM tmp_tbwschool             ;
+    INSERT INTO tbwsubway             SELECT * FROM tmp_tbwsubway             ;
+    INSERT INTO tbwthirdadmicty       SELECT * FROM tmp_tbwthirdadmicty       ;
+    INSERT INTO tbwtrain              SELECT * FROM tmp_tbwtrain              ;
+    INSERT INTO tbwzipcode            SELECT * FROM tmp_tbwzipcode            ;
+ 
+    DROP TABLE tbwapartlfno;
+    DROP TABLE tbwhousid   ;
+    DROP TABLE tbwpophous  ;
+    DROP TABLE tbwstore    ;
+ 
+    EXEC SP_RENAME 'TMP_TBWAPARTLFNO' , 'TBWAPARTLFNO';
+    EXEC SP_RENAME 'TMP_TBWHOUSID' , 'TBWHOUSID';
+    EXEC SP_RENAME 'TMP_TBWPOPHOUS' , 'TBWPOPHOUS';
+    EXEC SP_RENAME 'TMP_TBWSTORE' , 'TBWSTORE';
+ 
+    --// 인덱스 rename (효율적인 방법 나중에 찾아보자... 그냥 ssms 에서 손으로 하는게 더 편함..)
+ 
+	EXEC sp_rename 'TBWHOUSID.PK_TMP_TBWHOUSID'		, 'PK_TBWHOUSID';
+	EXEC sp_rename 'TBWHOUSID.IDX_TMP_TBWHOUSID_01'         , 'IDX_TBWHOUSID_01'   , 'INDEX' ;
+	EXEC sp_rename 'TBWHOUSID.IDX_TMP_TBWHOUSID_02'         , 'IDX_TBWHOUSID_02'   , 'INDEX' ;
+	EXEC sp_rename 'TBWHOUSID.IDX_TMP_TBWHOUSID_03'         , 'IDX_TBWHOUSID_03'   , 'INDEX' ;
+	EXEC sp_rename 'TBWAPARTLFNO.IDX_TMP_TBWAPARTLFNO_01'   , 'IDX_TBWAPARTLFNO_01', 'INDEX' ;
+	EXEC sp_rename 'TBWPOPHOUS.IDXCLU_TMP_TBWPOPHOUS'       , 'IDXCLU_TBWPOPHOUS'  , 'INDEX' ;
+	EXEC sp_rename 'TBWPOPHOUS.IDX_TMP_TBWPOPHOUS_02'       , 'IDX_TBWPOPHOUS_02'  , 'INDEX' ;
+	EXEC sp_rename 'TBWPOPHOUS.IDX01_TMP_TBWPOPHOUS'        , 'IDX01_TBWPOPHOUS'   , 'INDEX' ;
+	EXEC sp_rename 'TBWPOPHOUS.IDX02_TMP_TBWPOPHOUS'        , 'IDX02_TBWPOPHOUS'   , 'INDEX' ;
+	EXEC sp_rename 'TBWPOPHOUS.IDX03_TMP_TBWPOPHOUS'        , 'IDX03_TBWPOPHOUS'   , 'INDEX' ;
+	EXEC sp_rename 'TBWSTORE.TMP_TBWSTORE_IDX01'            , 'TBWSTORE_IDX01'     , 'INDEX' ;
+	EXEC sp_rename 'TBWSTORE.TMP_TBWSTORE_IDX02'            , 'TBWSTORE_IDX02'     , 'INDEX' ;
+	EXEC sp_rename 'TBWSTORE.TMP_TBWSTORE_IDX03'            , 'TBWSTORE_IDX03'     , 'INDEX' ;
+	EXEC sp_rename 'TBWSTORE.TMP_TBWSTORE_IDX04'            , 'TBWSTORE_IDX04'     , 'INDEX' ;
+ 
+--// 11. 로딩용 임시테이블 drop
+    DROP TABLE tmp_tbwadmictydong       ;
+    DROP TABLE tmp_tbwadmilgctydong     ;
+    DROP TABLE tmp_tbwadmilgctydong_full;
+    DROP TABLE tmp_tbwadmilifeinfo      ;
+    DROP TABLE tmp_tbwadmimbr           ;
+    DROP TABLE tmp_tbwadmistat          ;
+    DROP TABLE tmp_tbwapart             ;
+    DROP TABLE tmp_tbwapartalias        ;
+    DROP TABLE tmp_tbwapartdanji        ;
+    DROP TABLE tmp_tbwapartdong         ;
+    DROP TABLE tmp_tbwapartinfo         ;
+    DROP TABLE tmp_tbwapartnm           ;
+    DROP TABLE tmp_tbwbusterminal       ;
+    DROP TABLE tmp_tbwctytaxinfo        ;
+    DROP TABLE tmp_tbwhous              ;
+    DROP TABLE tmp_tbwhousdong          ;
+    DROP TABLE tmp_tbwlandprice         ;
+    DROP TABLE tmp_tbwlgadmictydong     ;
+    DROP TABLE tmp_tbwlgctydong         ;
+    DROP TABLE tmp_tbwlgsndalias        ;
+    DROP TABLE tmp_tbwlgsndhous         ;
+    DROP TABLE tmp_tbwschool            ;
+    DROP TABLE tmp_tbwsubway            ;
+    DROP TABLE tmp_tbwthirdadmicty      ;
+    DROP TABLE tmp_tbwtrain             ;
+    DROP TABLE tmp_tbwzipcode           ;
+ 
+--// 09. sql-server 재시작
+ 
+     메뉴상의 "구성도구 >> SQL Server 구성 관리자" 실행하여 SQL-Server STOP
+     --> 이때 sqlserver agent 도 동시에 중지되므로 서비스 재시작시에는
+     두 가지를 다 시작해줘야만 함.. sql-server service, sql-server agent
+ 
+--// 10. rule 파일 및 정제엔진 업데이트(보통은 rule 파일만 업데이트 일어남.. 64bit 컴파일...)
+    C:\AddrClean\BC3FullZip.rule
+ 
+    받은 addrclean.exe을 해당 디렉토리에 두개의 파일이름으로 복사 C:\AddrClean\GS_DailyClean.exe / C:\AddrClean\addrclean.exe
+    C:\Program Files\Microsoft SQL 
+    Server\MSSQL.1\MSSQL\Binn\addrclean.dll  (이 파일은 sql-server 멈춘 후에 복사가능)
+ 
+    -- 완료후 SQLSERVER/ SQLSERVER AGENT 서비스 시작
+ 
+    --// 실시간 주소정제 테스트
+    EXEC P_GCRM_REALTIME_CLEAN_TEST '','서울 은평구 구산동 162-1 경향파크 2-601'
+ 
+--// 11. 점포 드라이빙타임별 인구수 데이터 요약작업 실행(작업실행 전에 일배치작업 반드시 중지시킬 것!!!!)
+    EXEC P_GCRM_POPHOUS_STORE_BATCH;
+ 
+--// 12. 전체고객 주소정제 작업 실행(고객주소 내려받고 split 시키는거는 수동으로 처리했음..)
+ 
+    --> 작업 배치파일 : C:\AddrClean\ALL_CLEANSING.bat
+    --> 주소 내려받는 스크립트 :
+    bcp "SELECT DB.DBO.RPAD(LTRIM(RTRIM(A.CUST_NO_ID)),20,' ') 
+	+ MAX(DB.DBO.RPAD(REPLACE(ISNULL(B.ZIP_CODE,''),'-',''),6,' ')) 
+	+ MAX(REPLACE(REPLACE(REPLACE(ISNULL(B.ADDR1, '') 
+	+ ' ' 
+	+ REPLACE(ISNULL(B.ADDR2, ''),'원당지구',''), CHAR(10), ' '), CHAR(13), ''),'∼','~')) 
+	FROM GSDB..TB_GZ_CUST A, cms_mart..TB_OC_ZM_CUST B 
+       WHERE A.CUST_NO_ID=B.CUST_NO AND RTRIM(LTRIM(A.CUST_NO_ID)) > ' '  
+       group by GSDB.DBO.RPAD(LTRIM(RTRIM(A.CUST_NO_ID)),20,' ')  " queryout C:\ADDRCLEAN\**_DAILY_ALL.dat -c -S ****** -U ****** -P  ******
+
+    --> C:\addrclean\textcleaver.exe 파일을 이용해서 100만건씩 쪼개서 사용.. 결과파일 이름은 GS_DAILY_000*.dat 로... 
+    **_DAILY_000*.dat OUT LOG 파일 3종 지우고 시작

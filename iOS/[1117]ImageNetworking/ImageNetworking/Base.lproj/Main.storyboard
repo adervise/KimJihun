@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="ViU-jC-XMS">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Image Table View Controller-->
+        <scene sceneID="zQm-Hw-Yg8">
+            <objects>
+                <tableViewController id="VXk-vs-vh6" customClass="ImageTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="XCP-Gt-yax">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="imageCell" textLabel="hRm-70-tJx" imageView="i9E-iu-kIE" style="IBUITableViewCellStyleDefault" id="8q1-RE-0Xd">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="8q1-RE-0Xd" id="EXp-f1-h6u">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="hRm-70-tJx">
+                                            <rect key="frame" x="74" y="0.0" width="286" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="place_holder" id="i9E-iu-kIE">
+                                            <rect key="frame" x="15" y="0.0" width="44" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </imageView>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="pCq-09-svj" kind="show" id="GML-XQ-lvv"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="VXk-vs-vh6" id="AFF-4E-Jbd"/>
+                            <outlet property="delegate" destination="VXk-vs-vh6" id="pE6-24-GEa"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="DeH-J2-ZBE">
+                        <barButtonItem key="leftBarButtonItem" systemItem="refresh" id="HK1-3G-meu">
+                            <connections>
+                                <action selector="clickRefeshImageListButton:" destination="VXk-vs-vh6" id="eiG-v5-mo9"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="0WR-3D-u8f">
+                            <connections>
+                                <action selector="clickUploadImageButton:" destination="VXk-vs-vh6" id="623-C0-64m"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DUM-4o-pEs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1204" y="214.54272863568218"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="9Iy-BC-cFi">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ViU-jC-XMS" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="kwj-jn-Uxf">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="VXk-vs-vh6" kind="relationship" relationship="rootViewController" id="VaO-yN-h7Q"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="V0F-p5-nWS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="406" y="215"/>
+        </scene>
+        <!--Image View Controller-->
+        <scene sceneID="mKO-jU-Hl6">
+            <objects>
+                <viewController id="pCq-09-svj" customClass="ImageViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Rjg-q2-Fkk"/>
+                        <viewControllerLayoutGuide type="bottom" id="DwU-Nk-UJi"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="HRx-m6-Hmw">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="p3d-iu-Eg8">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="xV8-KZ-cgF" appends="YES" id="yTF-WY-hFg"/>
+                                </connections>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="p3d-iu-Eg8" firstAttribute="leading" secondItem="HRx-m6-Hmw" secondAttribute="leading" id="ntf-IA-0zB"/>
+                            <constraint firstItem="DwU-Nk-UJi" firstAttribute="top" secondItem="p3d-iu-Eg8" secondAttribute="bottom" id="rkv-2S-jEE"/>
+                            <constraint firstAttribute="trailing" secondItem="p3d-iu-Eg8" secondAttribute="trailing" id="vy3-xU-ubb"/>
+                            <constraint firstItem="p3d-iu-Eg8" firstAttribute="top" secondItem="Rjg-q2-Fkk" secondAttribute="bottom" id="wcp-jv-yo8"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="5Sx-ce-Raa">
+                        <barButtonItem key="rightBarButtonItem" systemItem="edit" id="uXM-1y-i9H">
+                            <connections>
+                                <action selector="clickEditButton:" destination="pCq-09-svj" id="78e-30-2VQ"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="imageView" destination="p3d-iu-Eg8" id="GMU-s6-jet"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="D8M-vQ-u0S" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="xV8-KZ-cgF">
+                    <connections>
+                        <action selector="tapImageView:" destination="pCq-09-svj" id="bEs-Eu-Xrq"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="1961" y="215"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="place_holder" width="94" height="92"/>
+    </resources>
+</document>

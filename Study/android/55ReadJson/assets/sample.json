@@ -1,0 +1,19 @@
+{
+	"menu":"회원관리",
+	"member":
+	[
+		{
+			"id":"dragon",
+			"name":"홍길동",
+			"address":"강남구",
+			"job":"학생"
+		},
+		{
+			"id":"angel",
+			"name":"송혜교",
+			"address":"경동구",
+			"job":"회사원"
+		}
+	]
+}
+

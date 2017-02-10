@@ -1,0 +1,57 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".MainActivity" >
+
+    <EditText
+        android:id="@+id/editText1"
+        android:layout_width="fill_parent"
+        android:layout_height="40dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:lines="5"
+        android:autoLink="phone"
+        android:background="#ffffaa"
+        android:text="안드로이드 재밌다!!!\nTel:02-111-2222" />
+    
+    <EditText
+        android:id="@+id/editText2"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="#ccffff"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/editText1"
+        android:autoLink="web"
+        android:text="http://develper.android.com" />
+    
+    
+        <EditText
+        android:id="@+id/editText3"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="#ccffff"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/editText2"
+        android:password="true"
+        android:text="1234567" />
+        
+        <EditText
+        android:id="@+id/editText4"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="#ccffff"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/editText3"
+        android:autoLink="all" 
+        android:selectAllOnFocus="true"
+         android:text="http://www.naver.com" />
+        
+        />
+    
+</RelativeLayout>
