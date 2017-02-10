@@ -34,27 +34,27 @@
 #### **5. [Quiz]** : **궁금했던 내용 및 개발에 관련된 참고자료 공간입니다.**
 - 블로그 준비중입니다
 
-[home]: <https://github.com/adervise1/KimJihun2>
+[home]: <https://github.com/adervise1/KimJihun>
 
-[profile]: <https://github.com/adervise1/KimJihun2/tree/master/profile>
-[resume]: <https://github.com/adervise1/KimJihun2/blob/master/profile/KimJihun2Profile.pdf>
-[recommendation 1]: <https://github.com/adervise1/KimJihun2/blob/master/profile/%EC%B6%94%EC%B2%9C%EC%84%9C1.png>
-[recommendation 2]: <https://github.com/adervise1/KimJihun2/blob/master/profile/%EC%B6%94%EC%B2%9C%EC%84%9C2.png>
+[profile]: <https://github.com/adervise1/KimJihun/tree/master/profile>
+[resume]: <https://github.com/adervise1/KimJihun/blob/master/profile/KimJihunProfile.pdf>
+[recommendation 1]: <https://github.com/adervise1/KimJihun/blob/master/profile/%EC%B6%94%EC%B2%9C%EC%84%9C1.png>
+[recommendation 2]: <https://github.com/adervise1/KimJihun/blob/master/profile/%EC%B6%94%EC%B2%9C%EC%84%9C2.png>
 
-[iOS]: <https://github.com/adervise1/KimJihun2/tree/master/iOS>
-[README.MD]:<https://github.com/adervise1/KimJihun2/blob/master/iOS/README.md>
+[iOS]: <https://github.com/adervise1/KimJihun/tree/master/iOS>
+[README.MD]:<https://github.com/adervise1/KimJihun/blob/master/iOS/README.md>
 
-[project]: <https://github.com/adervise1/KimJihun2/tree/master/project>
-[iOS project]: <https://github.com/adervise1/KimJihun2/tree/master/project/iOSProject>
-[Java]:<https://github.com/adervise1/KimJihun2/tree/master/project/Java/ServiceBD>
-[script]:<https://github.com/adervise1/KimJihun2/tree/master/project/script>
-[python]:<https://github.com/adervise1/KimJihun2/tree/master/project/script/python>
-[sql]:<https://github.com/adervise1/KimJihun2/tree/master/project/script/sql>
+[project]: <https://github.com/adervise1/KimJihun/tree/master/project>
+[iOS project]: <https://github.com/adervise1/KimJihun/tree/master/project/iOSProject>
+[Java]:<https://github.com/adervise1/KimJihun/tree/master/project/Java/ServiceBD>
+[script]:<https://github.com/adervise1/KimJihun/tree/master/project/script>
+[python]:<https://github.com/adervise1/KimJihun/tree/master/project/script/python>
+[sql]:<https://github.com/adervise1/KimJihun/tree/master/project/script/sql>
 
-[Study]: <https://github.com/adervise1/KimJihun2/tree/master/Study>
-[iOS Study]: <https://github.com/adervise1/KimJihun2/tree/master/Study/iOS>
-[android_study]: <https://github.com/adervise1/KimJihun2/tree/master/Study/android>
-[Java_study]: <https://github.com/adervise1/KimJihun2/tree/master/Study/java/DSLB>
-[python_study]: <https://github.com/adervise1/KimJihun2/tree/master/Study/python>
+[Study]: <https://github.com/adervise1/KimJihun/tree/master/Study>
+[iOS Study]: <https://github.com/adervise1/KimJihun/tree/master/Study/iOS>
+[android_study]: <https://github.com/adervise1/KimJihun/tree/master/Study/android>
+[Java_study]: <https://github.com/adervise1/KimJihun/tree/master/Study/java/DSLB>
+[python_study]: <https://github.com/adervise1/KimJihun/tree/master/Study/python>
 
-[Quiz]: <https://github.com/adervise1/KimJihun2/tree/master/Quiz>
+[Quiz]: <https://github.com/adervise1/KimJihun/tree/master/Quiz>
