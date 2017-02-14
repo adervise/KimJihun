@@ -11,7 +11,7 @@
 
 
 <br>
-#### **:apple:. [iOS] :  FastCampus iOS스쿨 과정 및 iOS관련 개발 공간입니다.**
+### **:apple: [iOS] :  FastCampus iOS스쿨 과정 및 iOS관련 개발 공간입니다.**
 - [README.MD] : 목차 파일로 이동합니다  
 
 <br>
