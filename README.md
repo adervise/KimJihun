@@ -3,18 +3,15 @@
 
 #### **0. [Home] : 메인화면 입니다.**
 
-<br>
 #### **1. [profile] : 저의 이력서 및 추천서가 있는 공간입니다.**
 - [resume] : 이력서
 - [recommendation 1] : 추천서1
 - [recommendation 2] : 추천서2
 
 
-<br>
 ### **2. [iOS] : iOS스터디 및 iOS개발 공간입니다.**
 - [README.MD] : 목차 파일로 이동합니다  
 
-<br>
 #### **3. [project]** : **프로젝트 및 업무와 관련된 내용들을 정리한 공간입니다.**
 - [iOS project] : 프로젝트 및 업무와 관련된 내용들을 정리한 공간입니다.
 - [Java] : 자바 프로젝트 했던 공간입니다.
@@ -22,8 +19,6 @@
 - [python] : 파이썬 스크립트
 - [sql] : SQL & DB 관련 스크립트
 
-
-<br>
 #### **4. [Study]** : **개인적으로 Study 하며 정리한 것이 있는 공간입니다.**
 - [iOS Study] : iOS 스터디 입니다.
 - [android_study] : android 스터디 입니다.
@@ -31,8 +26,6 @@
 - [python_study] : python 스터디 입니다.
 - [Algorithm / Data Structures] : 알고리즘 & 자료구조
 
-
-<br>
 #### **5. [Quiz]** : **궁금했던 내용 및 개발에 관련된 참고자료 공간입니다.**
 - 블로그 준비중입니다
 
@@ -44,7 +37,7 @@
 [recommendation 2]: <https://github.com/adervise1/KimJihun/blob/master/profile/%EC%B6%94%EC%B2%9C%EC%84%9C2.png>
 
 [iOS]: <https://github.com/adervise1/KimJihun/tree/master/iOS>
-[README.MD]:<https://github.com/adervise1/KimJihun/blob/master/iOS/README.md>
+[iOS README.MD]:<https://github.com/adervise1/KimJihun/blob/master/iOS/README.md>
 
 [project]: <https://github.com/adervise1/KimJihun/tree/master/project>
 [iOS project]: <https://github.com/adervise1/KimJihun/tree/master/project/iOSProject>
