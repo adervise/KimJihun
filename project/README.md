@@ -10,7 +10,7 @@
 - [recommendation 2] : 추천서2
 
 <br>
-### **&#x1F34E;  [iOS]** :  FastCampus iOS스쿨 과정 및 iOS관련 개발 공간입니다.
+### **2. [iOS]** :  FastCampus iOS스쿨 과정 및 iOS관련 개발 공간입니다.
 - [README.MD] : 목차 파일로 이동합니다  
 
 <br>
