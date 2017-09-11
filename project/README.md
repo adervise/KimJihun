@@ -11,11 +11,11 @@
 
 
 
-#### **1. [WebProject1]** : **웹프로젝트 및 업무와 관련된 내용들을 정리한 공간입니다.**
-**1. [DB]** : ** Database Query에 대한 코드입니다.**
+#### **2. [WebProject1]** : **웹프로젝트 및 업무와 관련된 내용들을 정리한 공간입니다.**
+**2.1. [DB]** : Database Query에 대한 코드입니다.
 - [SQL] : SQL파일 바로가기
 
-**2. [Front]** : ** 웹프론트에 대한 JS, CSS, JSP 에 대한 코드입니다.**
+**2.2. [Front]** : 웹프론트에 대한 JS, CSS, JSP 에 대한 코드입니다.
 - [css_common.css] : 퍼블리싱 관련 파일1.
 - [css_contents.css] : 퍼블리싱 관련 파일2.
 - [css_layout.css] : 퍼블리싱 관련 파일3.
@@ -34,7 +34,7 @@
 - [jsp_validator.jsp] : jsp 화면 코드
 
 
-**3. [Server]** : ** JAVA 서버단에 대한 코드 입니다..**
+**2.3. [Server]** : JAVA 서버단에 대한 코드 입니다.
 - [BdController.java] : Java controller 
 - [BdDAO.java] : Java DAO
 - [BdService.java] : Java Service 
@@ -43,7 +43,7 @@
 - [ExcelDownloadView.java] : Java Excel Download
 
 	
-**4. [python]** : ** 하둡 & DB 연계시 파이썬 스크립트를 사용한 부분입니다.**
+**2.4. [python]** : 하둡 & DB 연계시 파이썬 스크립트를 사용한 부분입니다.
 
 
 
