@@ -29,7 +29,7 @@
 - [Algorithm / Data Structures] : 알고리즘 & 자료구조
 
 #### **5. [blog]** : ** 평소 개인적인 생각 및 개발에 대한 내용을 적는 블로그 공간입니다..**
-- [Blog] : http://adervise1.tistory.com/
+- http://adervise1.tistory.com/
 
 [home]: <https://github.com/adervise1/KimJihun>
 
@@ -56,5 +56,3 @@
 [python_study]: <https://github.com/adervise1/KimJihun/tree/master/Study/python>
 [Algorithm / Data Structures]: <https://github.com/adervise1/KimJihun/tree/master/Study/jsAlgorithm>
 
-
-[Blog]: <http://adervise1.tistory.com/>
