@@ -14,11 +14,9 @@
 - [iOS_study README.MD] : 목차 파일로 이동합니다  
 
 #### **3. [project]** : **프로젝트 및 업무와 관련된 내용들을 정리한 공간입니다.**
-- [iOS project] : 프로젝트 및 업무와 관련된 내용들을 정리한 공간입니다.
-- [Java] : 자바 프로젝트 했던 공간입니다.
-- [script] : 프로젝트 수행 중 사용했던 스크립트 모음입니다. (python, SQL)
-- [python] : 파이썬 스크립트
-- [sql] : SQL & DB 관련 스크립트
+- [iOS] : iOS 프로젝트 중 일부 공개가능한 코드들입니다.
+- [WebProject1] : 프로젝트1에 대한 일부 공개가능한 코드들입니다.
+
 
 #### **4. [Study]** : **개인적으로 Study 하며 정리한 것이 있는 공간입니다.**
 - [iOS Study] : iOS 스터디 입니다.
@@ -42,16 +40,6 @@
 [iOS_study README.MD]:<https://github.com/adervise1/KimJihun/blob/master/iOS/README.md>
 
 [project]: <https://github.com/adervise1/KimJihun/tree/master/project>
-[iOS project]: <https://github.com/adervise1/KimJihun/tree/master/project/iOSProject>
-[Java]:<https://github.com/adervise1/KimJihun/tree/master/project/Java/ServiceBD>
-[script]:<https://github.com/adervise1/KimJihun/tree/master/project/script>
-[python]:<https://github.com/adervise1/KimJihun/tree/master/project/script/python>
-[sql]:<https://github.com/adervise1/KimJihun/tree/master/project/script/sql>
-
-[Study]: <https://github.com/adervise1/KimJihun/tree/master/Study>
-[iOS Study]: <https://github.com/adervise1/KimJihun/tree/master/Study/iOS>
-[android_study]: <https://github.com/adervise1/KimJihun/tree/master/Study/android>
-[Java_study]: <https://github.com/adervise1/KimJihun/tree/master/Study/java/DSLB>
-[python_study]: <https://github.com/adervise1/KimJihun/tree/master/Study/python>
-[Algorithm / Data Structures]: <https://github.com/adervise1/KimJihun/tree/master/Study/jsAlgorithm>
+[iOS]: <https://github.com/adervise1/KimJihun/tree/master/project/iOS>
+[WebProject1]:<https://github.com/adervise1/KimJihun/tree/master/project/WebProject1>
 
