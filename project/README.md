@@ -11,7 +11,7 @@
 
 
 
-#### **2. [WebProject1]** : **웹프로젝트 및 업무와 관련된 내용들을 정리한 공간입니다.**
+#### **2. [WebProject1]** : **웹프로젝트 및 업무와 관련된 내용들을 정리한 공간입니다.** <br>
 **2.1. [DB]** : Database Query에 대한 코드입니다.
 - [SQL] : SQL파일 바로가기
 
@@ -57,7 +57,7 @@
 
 [SQL]: <https://github.com/adervise1/KimJihun/blob/master/project/WebProject1/DB/cmn_big_log_SQL.xml>
 
-
+[css_common.css]: <https://github.com/adervise1/KimJihun/blob/master/project/WebProject1/Front/css_common.css>
 [css_contents.css]: <https://github.com/adervise1/KimJihun/blob/master/project/WebProject1/Front/css_contents.css>
 [css_layout.css]: <https://github.com/adervise1/KimJihun/blob/master/project/WebProject1/Front/css_layout.css>
 [js_JHvalidate.js]: <https://github.com/adervise1/KimJihun/blob/master/project/WebProject1/Front/js_JHvalidate.js>
