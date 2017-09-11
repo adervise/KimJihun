@@ -4,10 +4,11 @@
 #### **0. [Home] : 메인화면 입니다.**
 
 #### **1. [profile] : 저의 이력서 및 추천서가 있는 공간입니다.**
-- [resume] : 이력서 ver2.0
-- [resume_old] : 이력서 ver1.0
-- [recommendation 1] : 추천서1
-- [recommendation 2] : 추천서2
+- [profile Main] : 프로필 홈 
+- [profile1] : 엔지니어 김지훈의 이력서.
+- [profile2] : 엔지니어 김지훈의 자기소개서.
+- [recommendation1] : 김지훈에 대해서 일부 알아볼 수 있는 자료입니다1.
+- [recommendation2] : 김지훈에 대해서 일부 알아볼 수 있는 자료입니다2.
 
 
 #### **2. [iOS] : iOS스터디 및 iOS개발 공간입니다.**
@@ -32,12 +33,11 @@
 
 [home]: <https://github.com/adervise1/KimJihun>
 
-[profile]: <https://github.com/adervise1/KimJihun/tree/master/profile>
-
-[resume]: <https://github.com/adervise1/KimJihun/blob/master/profile/KimJihunProfile.pdf>
-[resume_old]: <https://github.com/adervise1/KimJihun/blob/master/profile/KimJihunProfileOld.pdf>
-[recommendation 1]: <https://github.com/adervise1/KimJihun/blob/master/profile/%EC%B6%94%EC%B2%9C%EC%84%9C1.png>
-[recommendation 2]: <https://github.com/adervise1/KimJihun/blob/master/profile/%EC%B6%94%EC%B2%9C%EC%84%9C2.png>
+[profile Main]: <https://github.com/adervise1/KimJihun/tree/master/profile>
+[profile1]: <https://github.com/adervise1/KimJihun/blob/master/profile/KimJihunProfile.pdf>
+[profile2]: <https://github.com/adervise1/KimJihun/blob/master/profile/KimJihunProfile2.pdf>
+[recommendation1]: <https://github.com/adervise1/KimJihun/blob/master/profile/%EC%B6%94%EC%B2%9C%EC%84%9C1.png>
+[recommendation2]: <https://github.com/adervise1/KimJihun/blob/master/profile/%EC%B6%94%EC%B2%9C%EC%84%9C2.png>
 
 [iOS]: <https://github.com/adervise1/KimJihun/tree/master/iOS>
 [iOS README.MD]:<https://github.com/adervise1/KimJihun/blob/master/iOS/README.md>
