@@ -1,54 +1,24 @@
-안녕하세요 김지훈의 Github 입니다.
-===================
+저의 코딩 일부를 담아두었습니다. <br>
+이 코딩은 전체가 아닌 아주 일부임을 말씀드립니다.
 
 #### **0. [Home] : 메인화면 입니다.**
 
-#### **1. [profile] : 저의 이력서 및 추천서가 있는 공간입니다.**
-- [resume] : 이력서
-- [recommendation 1] : 추천서1
-- [recommendation 2] : 추천서2
-
-### **2. [iOS]** :  FastCampus iOS스쿨 과정 및 iOS관련 개발 공간입니다.
-- [README.MD] : 목차 파일로 이동합니다  
-
-#### **3. [project]** : **프로젝트 및 업무와 관련된 내용들을 정리한 공간입니다.**
-- [iOS project] : 프로젝트 및 업무와 관련된 내용들을 정리한 공간입니다.
-- [Java] : 자바 프로젝트 했던 공간입니다.
-- [script] : 프로젝트 수행 중 사용했던 스크립트 모음입니다. (python, SQL)
-- [python] : 파이썬 스크립트
-- [sql] : SQL & DB 관련 스크립트
-
-#### **4. [Study]** : **개인적으로 Study 하며 정리한 것이 있는 공간입니다.**
-- [iOS Study] : iOS 스터디 입니다.
-- [android_study] : android 스터디 입니다.
-- [Java_study] : 국비지원과정 Java 프로젝트입니다.
-- [python_study] : python 스터디 입니다.
+#### **1. [iOS]** : ** iOS 관련 프로젝트 일부 저의 코딩입니다.**
+- [AppDelegate] : 델리게이트 셋팅에 대한 부분을 개발 및 스터디 했던 내용입니다.
+- [MediaViewController] : 가로보기 화면에서 어떤 입력이 왔을 때 사진을 다운 받는 코드입니다.
+- [UserOrderManagerViewController] : 테이블 + 컬렉션 뷰 데이터 컨트롤에 해당하는 코드입니다.
+- [ViewController] : 일반적인 메인 뷰컨트롤러의 일부 코드입니다.
 
 
-#### **5. [Quiz]** : **궁금했던 내용 및 개발에 관련된 참고자료 공간입니다.**
-- 블로그 준비중입니다
 
-[home]: <https://github.com/adervise1/KimJihun>
+#### **1. [iOS]** : **프로젝트 및 업무와 관련된 내용들을 정리한 공간입니다.**
+- [iOS] : iOS 프로젝트 중 일부 공개가능한 코드들입니다.
+- [WebProject1] : 프로젝트1에 대한 일부 공개가능한 코드들입니다.
 
-[profile]: <https://github.com/adervise1/KimJihun/tree/master/profile>
-[resume]: <https://github.com/adervise1/KimJihun/blob/master/profile/KimJihunProfile.pdf>
-[recommendation 1]: <https://github.com/adervise1/KimJihun/blob/master/profile/%EC%B6%94%EC%B2%9C%EC%84%9C1.png>
-[recommendation 2]: <https://github.com/adervise1/KimJihun/blob/master/profile/%EC%B6%94%EC%B2%9C%EC%84%9C2.png>
 
-[iOS]: <https://github.com/adervise1/KimJihun/tree/master/iOS>
-[README.MD]:<https://github.com/adervise1/KimJihun/blob/master/iOS/README.md>
 
-[project]: <https://github.com/adervise1/KimJihun/tree/master/project>
-[iOS project]: <https://github.com/adervise1/KimJihun/tree/master/project/iOSProject>
-[Java]:<https://github.com/adervise1/KimJihun/tree/master/project/Java/ServiceBD>
-[script]:<https://github.com/adervise1/KimJihun/tree/master/project/script>
-[python]:<https://github.com/adervise1/KimJihun/tree/master/project/script/python>
-[sql]:<https://github.com/adervise1/KimJihun/tree/master/project/script/sql>
+[WebProject1]:<https://github.com/adervise1/KimJihun/blob/master/project/iOS/CIY/AppDelegate.m>
+[WebProject1]:<https://github.com/adervise1/KimJihun/blob/master/project/iOS/CIY/MediaViewController.m>
+[WebProject1]:<https://github.com/adervise1/KimJihun/blob/master/project/iOS/CIY/UserOrderManagerViewController.m>
+[WebProject1]:<https://github.com/adervise1/KimJihun/blob/master/project/iOS/CIY/ViewController.m>
 
-[Study]: <https://github.com/adervise1/KimJihun/tree/master/Study>
-[iOS Study]: <https://github.com/adervise1/KimJihun/tree/master/Study/iOS>
-[android_study]: <https://github.com/adervise1/KimJihun/tree/master/Study/android>
-[Java_study]: <https://github.com/adervise1/KimJihun/tree/master/Study/java/DSLB>
-[python_study]: <https://github.com/adervise1/KimJihun/tree/master/Study/python>
-
-[Quiz]: <https://github.com/adervise1/KimJihun/tree/master/Quiz>
