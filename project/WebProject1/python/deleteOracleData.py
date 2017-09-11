@@ -4,7 +4,7 @@ import sys
 import ConfigParser
 import cx_Oracle
 
-configFilePath = '/root/onnara/bizlog/conf/bizlog.conf'
+configFilePath = '/root/bizlog/conf/bizlog.conf'
 stdDate = sys.argv[1]
 config = ConfigParser.ConfigParser()
 config.read(configFilePath)

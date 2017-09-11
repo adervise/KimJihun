@@ -29,7 +29,7 @@ public class ExcelDownloadView extends AbstractExcelView {
 			throws Exception {
 		// TODO Auto-generated method stub
 		String userAgent = req.getHeader("User-Agent");
-		String fileName = "ONNARA.xls";
+		String fileName = "***.xls";
 
 		if(userAgent.indexOf("MSIE") > -1){
 			fileName = URLEncoder.encode(fileName, "utf-8");

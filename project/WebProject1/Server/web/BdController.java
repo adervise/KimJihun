@@ -1,5 +1,5 @@
 /**
- * @ClassName    : BdController.java
+ * @ClassName    : serviceController.java
  * @Description  :
  * @ModificationInformation
  * @
@@ -7,12 +7,10 @@
  * @ ----------    ---------   -------------------------------
  * @ 2015. 7. 1.   김지훈            최초생성
  *
- * @author  빅데이터 김지훈
+ * @author  김지훈
  * @since   2015. 7. 1.
  * @version 1.0
- * @see
  *
- *    Copyright (C) by Onnara All right reserved.
  */
 package ***.bd.web;
 

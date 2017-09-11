@@ -5,7 +5,7 @@ import ConfigParser
 import sys
 from common import execute_sqoop, make_log
 
-configFilePath = '/root/onnara/bizlog/conf/bizlog.conf'
+configFilePath = '/root/bizlog/conf/bizlog.conf'
 
 if __name__ == "__main__":
 #    ymd = sys.argv[1]
