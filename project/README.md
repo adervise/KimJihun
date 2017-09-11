@@ -17,8 +17,8 @@
 
 
 
-[WebProject1]:<https://github.com/adervise1/KimJihun/blob/master/project/iOS/CIY/AppDelegate.m>
-[WebProject1]:<https://github.com/adervise1/KimJihun/blob/master/project/iOS/CIY/MediaViewController.m>
-[WebProject1]:<https://github.com/adervise1/KimJihun/blob/master/project/iOS/CIY/UserOrderManagerViewController.m>
-[WebProject1]:<https://github.com/adervise1/KimJihun/blob/master/project/iOS/CIY/ViewController.m>
+[AppDelegate]:<https://github.com/adervise1/KimJihun/blob/master/project/iOS/CIY/AppDelegate.m>
+[MediaViewController]:<https://github.com/adervise1/KimJihun/blob/master/project/iOS/CIY/MediaViewController.m>
+[UserOrderManagerViewController]:<https://github.com/adervise1/KimJihun/blob/master/project/iOS/CIY/UserOrderManagerViewController.m>
+[ViewController]:<https://github.com/adervise1/KimJihun/blob/master/project/iOS/CIY/ViewController.m>
 
