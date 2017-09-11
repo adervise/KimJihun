@@ -19,11 +19,11 @@
 
 
 #### **4. [Study]** : **개인적으로 Study 하며 정리한 것이 있는 공간입니다.**
-- [iOS Study] : iOS 스터디 입니다.
+- [Algorithm] : 알고리즘 & 자료구조
 - [android_study] : android 스터디 입니다.
+- [iOS_miniProject] : ios mini project 입니다.
 - [Java_study] : 국비지원과정 Java 프로젝트입니다.
-- [python_study] : python 스터디 입니다.
-- [Algorithm / Data Structures] : 알고리즘 & 자료구조
+
 
 #### **5. [blog]** : ** 평소 개인적인 생각 및 개발에 대한 내용을 적는 블로그 공간입니다..**
 - http://adervise1.tistory.com/
@@ -36,10 +36,23 @@
 [recommendation1]: <https://github.com/adervise1/KimJihun/blob/master/profile/%EC%B6%94%EC%B2%9C%EC%84%9C1.png>
 [recommendation2]: <https://github.com/adervise1/KimJihun/blob/master/profile/%EC%B6%94%EC%B2%9C%EC%84%9C2.png>
 
+
 [iOS_study]: <https://github.com/adervise1/KimJihun/tree/master/iOS_study>
 [iOS_study README.MD]:<https://github.com/adervise1/KimJihun/blob/master/iOS/README.md>
+
 
 [project]: <https://github.com/adervise1/KimJihun/tree/master/project>
 [iOS]: <https://github.com/adervise1/KimJihun/tree/master/project/iOS/CIY>
 [WebProject1]:<https://github.com/adervise1/KimJihun/tree/master/project/WebProject1>
+
+
+[Study]: <https://github.com/adervise1/KimJihun/tree/master/Study>
+[android_study]: <https://github.com/adervise1/KimJihun/tree/master/Study/android>
+[WebProject1]:<https://github.com/adervise1/KimJihun/tree/master/project/WebProject1>
+
+
+[Algorithm]: <https://github.com/adervise1/KimJihun/tree/master/Study>
+[android_study]: <https://github.com/adervise1/KimJihun/tree/master/Study/android>
+[iOS_miniProject]: <https://github.com/adervise1/KimJihun/tree/master/Study/iOS>
+[Java_study]: <https://github.com/adervise1/KimJihun/tree/master/Study/java/DSLB>
 
