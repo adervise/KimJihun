@@ -28,8 +28,8 @@
 - [python_study] : python 스터디 입니다.
 - [Algorithm / Data Structures] : 알고리즘 & 자료구조
 
-#### **5. [Quiz]** : **궁금했던 내용 및 개발에 관련된 참고자료 공간입니다.**
-- 블로그 준비중입니다
+#### **5. [blog]** : ** 평소 개인적인 생각 및 개발에 대한 내용을 적는 블로그 공간입니다..**
+- [Blog] : http://adervise1.tistory.com/
 
 [home]: <https://github.com/adervise1/KimJihun>
 
@@ -57,4 +57,4 @@
 [Algorithm / Data Structures]: <https://github.com/adervise1/KimJihun/tree/master/Study/jsAlgorithm>
 
 
-[Quiz]: <https://github.com/adervise1/KimJihun/tree/master/Quiz>
+[Blog]: <http://adervise1.tistory.com/>
