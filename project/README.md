@@ -50,31 +50,36 @@
 
 [Home]: <https://github.com/adervise1/KimJihun>
 
-[SQL] : <https://github.com/adervise1/KimJihun/blob/master/project/WebProject1/DB/cmn_big_log_SQL.xml>
+[AppDelegate]: <https://github.com/adervise1/KimJihun/blob/master/project/iOS/CIY/AppDelegate.m>
+[MediaViewController]: <https://github.com/adervise1/KimJihun/blob/master/project/iOS/CIY/MediaViewController.m>
+[UserOrderManagerViewController]: <https://github.com/adervise1/KimJihun/blob/master/project/iOS/CIY/UserOrderManagerViewController.m>
+[ViewController]: <https://github.com/adervise1/KimJihun/blob/master/project/iOS/CIY/ViewController.m>
+
+[SQL]: <https://github.com/adervise1/KimJihun/blob/master/project/WebProject1/DB/cmn_big_log_SQL.xml>
 
 
-[css_contents.css] : <https://github.com/adervise1/KimJihun/blob/master/project/WebProject1/Front/css_contents.css>
-[css_layout.css] : <https://github.com/adervise1/KimJihun/blob/master/project/WebProject1/Front/css_layout.css>
-[js_JHvalidate.js] : <https://github.com/adervise1/KimJihun/blob/master/project/WebProject1/Front/js_JHvalidate.js>
-[js_common.js] : <https://github.com/adervise1/KimJihun/blob/master/project/WebProject1/Front/js_common.js>
-[js_none.js] : <https://github.com/adervise1/KimJihun/blob/master/project/WebProject1/Front/js_none.js>
-[jsp_category.jsp] : <https://github.com/adervise1/KimJihun/blob/master/project/WebProject1/Front/jsp_category.jsp>
-[jsp_categoryPop.jsp] : <https://github.com/adervise1/KimJihun/blob/master/project/WebProject1/Front/jsp_categoryPop.jsp>
-[jsp_categoryPopList.jsp] : <https://github.com/adervise1/KimJihun/blob/master/project/WebProject1/Front/jsp_categoryPopList.jsp>
-[jsp_category_register.jsp] : <https://github.com/adervise1/KimJihun/blob/master/project/WebProject1/Front/jsp_category_register.jsp>
-[jsp_index.jsp] : <https://github.com/adervise1/KimJihun/blob/master/project/WebProject1/Front/jsp_index.jsp>
-[jsp_main.jsp] : <https://github.com/adervise1/KimJihun/blob/master/project/WebProject1/Front/jsp_main.jsp>
-[jsp_mainRsList.jsp] : <https://github.com/adervise1/KimJihun/blob/master/project/WebProject1/Front/jsp_mainRsList.jsp>  
-[jsp_mainRsSearchList.jsp] : <https://github.com/adervise1/KimJihun/blob/master/project/WebProject1/Front/jsp_mainRsSearchList.jsp>
-[jsp_mainSearchList.jsp] : <https://github.com/adervise1/KimJihun/blob/master/project/WebProject1/Front/jsp_mainSearchList.jsp>
-[jsp_validator.jsp] : <https://github.com/adervise1/KimJihun/blob/master/project/WebProject1/Front/jsp_validator.jsp> 
+[css_contents.css]: <https://github.com/adervise1/KimJihun/blob/master/project/WebProject1/Front/css_contents.css>
+[css_layout.css]: <https://github.com/adervise1/KimJihun/blob/master/project/WebProject1/Front/css_layout.css>
+[js_JHvalidate.js]: <https://github.com/adervise1/KimJihun/blob/master/project/WebProject1/Front/js_JHvalidate.js>
+[js_common.js]: <https://github.com/adervise1/KimJihun/blob/master/project/WebProject1/Front/js_common.js>
+[js_none.js]: <https://github.com/adervise1/KimJihun/blob/master/project/WebProject1/Front/js_none.js>
+[jsp_category.jsp]: <https://github.com/adervise1/KimJihun/blob/master/project/WebProject1/Front/jsp_category.jsp>
+[jsp_categoryPop.jsp]: <https://github.com/adervise1/KimJihun/blob/master/project/WebProject1/Front/jsp_categoryPop.jsp>
+[jsp_categoryPopList.jsp]: <https://github.com/adervise1/KimJihun/blob/master/project/WebProject1/Front/jsp_categoryPopList.jsp>
+[jsp_category_register.jsp]: <https://github.com/adervise1/KimJihun/blob/master/project/WebProject1/Front/jsp_category_register.jsp>
+[jsp_index.jsp]: <https://github.com/adervise1/KimJihun/blob/master/project/WebProject1/Front/jsp_index.jsp>
+[jsp_main.jsp]: <https://github.com/adervise1/KimJihun/blob/master/project/WebProject1/Front/jsp_main.jsp>
+[jsp_mainRsList.jsp]: <https://github.com/adervise1/KimJihun/blob/master/project/WebProject1/Front/jsp_mainRsList.jsp>  
+[jsp_mainRsSearchList.jsp]: <https://github.com/adervise1/KimJihun/blob/master/project/WebProject1/Front/jsp_mainRsSearchList.jsp>
+[jsp_mainSearchList.jsp]: <https://github.com/adervise1/KimJihun/blob/master/project/WebProject1/Front/jsp_mainSearchList.jsp>
+[jsp_validator.jsp]: <https://github.com/adervise1/KimJihun/blob/master/project/WebProject1/Front/jsp_validator.jsp> 
 
-[BdController.java] : <https://github.com/adervise1/KimJihun/blob/master/project/WebProject1/Server/BdController.java>
-[BdDAO.java] : <https://github.com/adervise1/KimJihun/blob/master/project/WebProject1/Server/BdDAO.java>
-[BdService.java] : <https://github.com/adervise1/KimJihun/blob/master/project/WebProject1/Server/BdService.java>
-[BdServiceImpl.java] : <https://github.com/adervise1/KimJihun/blob/master/project/WebProject1/Server/BdServiceImpl.java>
-[BizlogRecordDAO.java] : <https://github.com/adervise1/KimJihun/blob/master/project/WebProject1/Server/BizlogRecordDAO.java>
-[ExcelDownloadView.java] : <https://github.com/adervise1/KimJihun/blob/master/project/WebProject1/Server/ExcelDownloadView.java>
+[BdController.java]: <https://github.com/adervise1/KimJihun/blob/master/project/WebProject1/Server/BdController.java>
+[BdDAO.java]: <https://github.com/adervise1/KimJihun/blob/master/project/WebProject1/Server/BdDAO.java>
+[BdService.java]: <https://github.com/adervise1/KimJihun/blob/master/project/WebProject1/Server/BdService.java>
+[BdServiceImpl.java]: <https://github.com/adervise1/KimJihun/blob/master/project/WebProject1/Server/BdServiceImpl.java>
+[BizlogRecordDAO.java]: <https://github.com/adervise1/KimJihun/blob/master/project/WebProject1/Server/BizlogRecordDAO.java>
+[ExcelDownloadView.java]: <https://github.com/adervise1/KimJihun/blob/master/project/WebProject1/Server/ExcelDownloadView.java>
 
 
-[python] : <https://github.com/adervise1/KimJihun/tree/master/project/WebProject1/python>
+[python]: <https://github.com/adervise1/KimJihun/tree/master/project/WebProject1/python>
