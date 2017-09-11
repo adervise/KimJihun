@@ -16,5 +16,5 @@
 [profile2]: <https://github.com/adervise1/KimJihun/blob/master/profile/KimJihunProfile2.pdf>
 
 [recommendation1]: <https://github.com/adervise1/KimJihun/blob/master/profile/%EC%B6%94%EC%B2%9C%EC%84%9C1.png>
-[recommendation12]: <https://github.com/adervise1/KimJihun/blob/master/profile/%EC%B6%94%EC%B2%9C%EC%84%9C1.png>
+[recommendation2]: <https://github.com/adervise1/KimJihun/blob/master/profile/%EC%B6%94%EC%B2%9C%EC%84%9C1.png>
     
