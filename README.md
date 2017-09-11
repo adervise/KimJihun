@@ -4,7 +4,8 @@
 #### **0. [Home] : 메인화면 입니다.**
 
 #### **1. [profile] : 저의 이력서 및 추천서가 있는 공간입니다.**
-- [resume] : 이력서
+- [resume] : 이력서 ver2.0
+- [resume_old] : 이력서 ver1.0
 - [recommendation 1] : 추천서1
 - [recommendation 2] : 추천서2
 
@@ -32,7 +33,9 @@
 [home]: <https://github.com/adervise1/KimJihun>
 
 [profile]: <https://github.com/adervise1/KimJihun/tree/master/profile>
+
 [resume]: <https://github.com/adervise1/KimJihun/blob/master/profile/KimJihunProfile.pdf>
+[resume_old]: <https://github.com/adervise1/KimJihun/blob/master/profile/KimJihunProfileOld.pdf>
 [recommendation 1]: <https://github.com/adervise1/KimJihun/blob/master/profile/%EC%B6%94%EC%B2%9C%EC%84%9C1.png>
 [recommendation 2]: <https://github.com/adervise1/KimJihun/blob/master/profile/%EC%B6%94%EC%B2%9C%EC%84%9C2.png>
 
