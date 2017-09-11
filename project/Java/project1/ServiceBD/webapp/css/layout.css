@@ -1,0 +1,18 @@
+#nWrap{width:100%;position:relative;}
+#nHeader{height:45px; background:url("../../../images/bd/common/bg_top.gif") repeat; border-bottom:1px solid #ccc;}
+
+#nContainer{width:100%;height:100%;background:#fff;position:relative;}
+#nContent{position:relative;width:100%;height:100%;}
+
+#nFooter{position:absolute; left:20px; bottom:50px; width:95px;}
+#nFooter a{color:#666;text-decoration:none}
+#nFooter ul{margin:0 0 10px}
+#nFooter address{font-family:verdana;font-size:9px;line-height:14px}
+#nFooter address img{vertical-align:middle}
+#nFooter address a{color:#444;font-family:tahoma;font-size:9px;font-weight:bold}
+#nFooter address a:hover{color:#009bc8}
+#nFooter address span{padding-left:2px}
+#nFooter address em{padding-left:6px}
+#nFooter address .logo{display:inline-block;*display:inline;vertical-align:top;*vertical-align:baseline}
+
+#hideLayer {height:0;}

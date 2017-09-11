@@ -1,0 +1,16 @@
+//
+//  PrefixHeaderTarget.pch
+//  [1031]PrecompiledHeaderExample
+//
+//  Created by celeste on 2016. 10. 31..
+//  Copyright © 2016년 iosSchool. All rights reserved.
+//
+
+#ifndef PrefixHeaderTarget_pch
+#define PrefixHeaderTarget_pch
+
+#import "MySingleton.h"
+static NSString *const MyName = @"GloryToGod";
+static const NSInteger MaxStudentCount = 30;
+
+#endif /* PrefixHeaderTarget_pch */
