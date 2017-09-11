@@ -10,7 +10,7 @@
 - [recommendation2] : 김지훈에 대해서 일부 알아볼 수 있는 자료입니다2.
 
 
-#### **2. [iOS_study] : iOS스터디 및 iOS개발 공간입니다.**
+#### **2. [iOS_study] : iOS스터디 및 학습했던 공간입니다.**
 
 
 #### **3. [project]** : **프로젝트 및 업무와 관련된 내용들을 정리한 공간입니다.**
@@ -40,6 +40,6 @@
 [iOS_study README.MD]:<https://github.com/adervise1/KimJihun/blob/master/iOS/README.md>
 
 [project]: <https://github.com/adervise1/KimJihun/tree/master/project>
-[iOS]: <https://github.com/adervise1/KimJihun/tree/master/project/iOS>
+[iOS]: <https://github.com/adervise1/KimJihun/tree/master/project/iOS/CIY>
 [WebProject1]:<https://github.com/adervise1/KimJihun/tree/master/project/WebProject1>
 
